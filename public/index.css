@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+    color: blanchedalmond;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    background: 
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+      url(./images/bg-image2.jpg) repeat fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+
+  }
+  
+
+.bg-overlay{
+    display: flex;
+    flex-direction: column;
+}
+.scroll_watcher{
+    position: fixed;
+    height: 7px;
+    background-color: rgb(83, 240, 83);
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    scale: 0 1 ;
+    transform-origin: left;
+    animation: scroll_watcher linear;
+    animation-timeline: scroll();
+}
+
+.bg-overlay {
+    display: flex;
+    flex-direction: column;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+    /* background-color: rgb(160, 58, 255); */
+}
+.section1{
+    height: 100vh;
+    background: 
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+      url(./images/bg-image.jpg) repeat fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: blueviolet;
+}
+.section2{
+  height: 100vh;
+  background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url(./images/bg-image1.jpg) repeat fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: blueviolet;
+}
+.section3{
+  height: 100vh;
+  background: 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url(./images/bg-image2.jpg) repeat fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: blueviolet;
+  background-position: center;
+}
+/* ==============Animations================ */
+@keyframes scroll_watcher {
+    to{ scale: 1 1;}
+}
+/* ==============Animations================ */
+
+  
+  .topnav {
+    background-color: #33333352; /* Set your desired background color */
+    position: sticky;
+    backdrop-filter: blur(1.5px);
+    padding-inline: 30px;
+    position: fixed;
+    width: 100%;
+    color: #fff; /* Set your desired text color */
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    margin-right: 20px; /* Adjust the spacing between menu items */
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: #fff; /* Set your desired link color */
+    transition: color 0.3s ease;
+  }
+  
+  .nav-list a:hover {
+    color: #ffcc00; /* Set your desired link hover color */
+  }
+
+  
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding-inline: 40px;
+  }
+  
+  .hero-content {
+    max-width: 600px; /* Adjust the maximum width of the content */
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    color: #555; /* Set your desired text color */
+  }
+  
+  .hero-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: #4285f4; /* Set your desired button background color */
+    color: #fff; /* Set your desired button text color */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  a:hover {
+    background-color: #34579e; /* Set your desired button hover background color */
+  }
+  
+  .hero-image {
+    flex: 1;
+    margin-left: 20px; /* Adjust the margin between content and image */
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+      }
+    
+      .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #444; /* Set your desired background color for mobile menu */
+      }
+    
+      .nav-list.active {
+        display: flex;
+        animation: shrink;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+        transition: 0.5s;
+      }
+    @keyframes shrink {
+      0%{
+        transform: scale(0);
+        opacity: 0;
+      }
+      100%{
+        transform: scale(1.1);
+        opacity: 1;
+      }
+
+    }
+      .nav-list li {
+        margin: 0;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #555; /* Set your desired border color for mobile menu */
+      }
+    .hero-section {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .hero-image {
+      margin: 20px 0;
+    }
+  }
+  

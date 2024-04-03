@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/index.css" />
+  </head>
+  <body>
+    <div class="bg-overlay flex">
+      <div class="scroll_watcher"></div>
+
+      <section>
+        <nav class="topnav">
+            <div class="logo">Your Logo</div>
+            <div class="menu-icon">&#9776;</div>
+            <ul class="nav-list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        <header class="hero-section">
+            <div class="hero-content">
+              <h1>Fetch-Fussion</h1>
+              <p>Your subtitle or description goes here. Provide a brief and captivating introduction.</p>
+              <a href="#section1">Explore More</a>
+            </div>
+            <div class="hero-image">
+              <img src="./public/images/bg-image.jpg" alt="Hero Image">
+            </div>
+          </header>
+      </section>
+      <section class="section1" id="section1">
+        <p>.</p>
+      </section>
+      <section class="section2">
+        <p>.</p>
+      </section>
+      <section class="section3">
+        <p>.</p>
+      </section>
+    </div>
+
+    <script>
+        // script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menuIcon = document.querySelector('.menu-icon');
+  const navList = document.querySelector('.nav-list');
+
+  menuIcon.addEventListener('click', function() {
+    navList.classList.toggle('active');
+  });
+});
+
+    </script>
+  </body>
+</html>
